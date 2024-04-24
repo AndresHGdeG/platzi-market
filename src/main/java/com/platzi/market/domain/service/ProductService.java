@@ -30,6 +30,12 @@ public class ProductService {
         return productRepository.save(product);
     }
 
+    /**
+     * First DELETE Request: 204 (No Content)
+     * Second DELETE Request: 404 (Not Found)
+     * @param productId
+     * @return boolean
+     */
     public boolean delete(int productId){
         return getProduct(productId).map(product -> {
             productRepository.delete(productId);
