@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "compras_prodcutos")
+@Table(name = "compras_productos")
 public class ComprasProducto {
 
     @EmbeddedId
@@ -23,6 +23,9 @@ public class ComprasProducto {
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
     private Producto producto;
 
+    public Producto getProducto() {
+        return producto;
+    }
 
     public ComprasProductoPK getId() {
         return id;

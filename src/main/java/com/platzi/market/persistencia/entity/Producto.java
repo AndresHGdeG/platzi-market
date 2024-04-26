@@ -87,4 +87,8 @@ public class Producto {
     public Boolean getEstado() {
         return estado;
     }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
 }
